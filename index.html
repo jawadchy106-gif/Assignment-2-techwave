@@ -52,7 +52,27 @@ body{font-family:'Inter',sans-serif;}
     gap: 12px !important;
   }
 }
-\n/* Mobile fix: make Why Choose cards taller so text never overflows */\n@media (max-width: 768px) {\n  #why .grid > article {\n    min-height: 240px !important;\n    height: auto !important;\n  }\n  #why .grid {\n    auto-rows: auto !important;\n  }\n}\n</style>
+
+/* Mobile fix: make Why Choose cards taller so text never overflows */
+@media (max-width: 768px) {
+  /* Equal height cards ONLY on mobile - PC untouched */
+  #why .grid {
+    display: grid !important;
+    grid-auto-rows: 1fr !important;
+  }
+  #why .grid > article {
+    height: 100% !important;
+    min-height: 260px !important;
+  }
+  #why .grid > article {
+    min-height: 240px !important;
+    height: auto !important;
+  }
+  #why .grid {
+    auto-rows: auto !important;
+  }
+}
+</style>
 </head>
 
 <body class="bg-[#0A0D16] text-white">
