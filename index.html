@@ -55,6 +55,16 @@ body{font-family:'Inter',sans-serif;}
 
 /* Mobile fix: make Why Choose cards taller so text never overflows */
 @media (max-width: 768px) {
+
+  /* Footer 2x2 layout ONLY on mobile */
+  footer .flex {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    row-gap: 12px !important;
+    column-gap: 12px !important;
+    justify-items: center !important;
+  }
+
   /* Equal height cards ONLY on mobile - PC untouched */
   #why .grid {
     display: grid !important;
