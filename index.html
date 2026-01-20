@@ -52,7 +52,7 @@ body{font-family:'Inter',sans-serif;}
     gap: 12px !important;
   }
 }
-</style>
+\n/* Mobile fix: make Why Choose cards taller so text never overflows */\n@media (max-width: 768px) {\n  #why .grid > article {\n    min-height: 240px !important;\n    height: auto !important;\n  }\n  #why .grid {\n    auto-rows: auto !important;\n  }\n}\n</style>
 </head>
 
 <body class="bg-[#0A0D16] text-white">
@@ -164,7 +164,7 @@ Join thousands of young professionals and tech enthusiasts who start their day w
 </section>
 
 <!-- ================= FEATURES ================= -->
-<section class="px-6 md:px-16 py-12 bg-[#230E3D]">
+<section id="why" class="px-6 md:px-16 py-12 bg-[#230E3D]">
 
 <h2 class="text-4xl font-bold text-center mb-6">Why Choose TechWave</h2>
 
