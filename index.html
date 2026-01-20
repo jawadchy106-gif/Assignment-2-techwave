@@ -25,6 +25,33 @@ body{font-family:'Inter',sans-serif;}
   gap:12px;
   z-index:50;
 }
+
+/* ===== MOBILE ONLY – DOES NOT AFFECT PC ===== */
+@media (max-width: 768px){
+
+  /* 1) Hide navbar subscribe button ONLY on mobile */
+  header nav > button{
+    display: none !important;
+  }
+
+  /* 2) Move hamburger fully to the right */
+  header nav label{
+    margin-left: auto !important;
+  }
+
+  /* 3) Force header & footer to visually match PC layout */
+  header, footer{
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  footer .flex{
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 12px !important;
+  }
+}
 </style>
 </head>
 
