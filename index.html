@@ -33,6 +33,11 @@ body{font-family:'Inter',sans-serif;}
     margin: 0 auto;
   }
 
+  /* Move microphone 65% upwards on mobile ONLY */
+  .mic-mobile{
+    transform: translate(-50%, -115%) !important;
+  }
+
   /* Move NEW badge relative to smaller circle */
   .new-badge{
     top: 10px !important;
@@ -40,10 +45,11 @@ body{font-family:'Inter',sans-serif;}
     transform: scale(0.9);
   }
 
-  /* Keep hero & footer backgrounds fully visible */
+  /* Ensure backgrounds load fully on mobile */
   .mobile-bg-fix{
     background-position: top center !important;
     background-size: cover !important;
+    background-repeat: no-repeat !important;
   }
 
   /* Footer platform grid 2x2 */
@@ -51,19 +57,13 @@ body{font-family:'Inter',sans-serif;}
     display:grid !important;
     grid-template-columns: 1fr 1fr !important;
     row-gap: 12px !important;
-    margin-top:-12px !important;   /* sync with waves */
+    margin-top:-14px !important;
   }
 
-  /* Ensure ALL episode cards show */
+  /* Force all episode cards visible */
   #episodes .grid{
     grid-template-columns: 1fr !important;
   }
-
-  /* Keep host text visible */
-  #host p{
-    display:block !important;
-  }
-
 }
 </style>
 </head>
@@ -102,7 +102,8 @@ Subscribe
 
   <img src="assets/images/hero-circle.png" class="w-full" alt="podcast circle">
 
-  <img src="assets/images/microphone.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 drop-shadow-lg" alt="mic">
+  <!-- Microphone with mobile specific class -->
+  <img src="assets/images/microphone.png" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 drop-shadow-lg mic-mobile" alt="mic">
 
   <span class="absolute bg-green-500 px-4 py-1.5 rounded-full text-xs shadow-[0_0_12px_rgba(34,197,94,0.7)] z-30 new-badge" style="top:19px; right:19px;">
   New
@@ -146,6 +147,7 @@ TechWave is your go-to podcast for staying ahead in the fast-paced world of tech
 <h2 class="text-4xl font-bold text-center mb-6">Why Choose TechWave</h2>
 
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-6xl mx-auto auto-rows-[160px]">
+
 <article class="bg-[#111827] p-4 rounded-2xl flex flex-col md:row-span-2">
 <img src="assets/images/headphone.png" class="w-8 mb-2">
 <b>Premium Audio Quality</b>
@@ -240,6 +242,14 @@ TechWave is your go-to podcast for staying ahead in the fast-paced world of tech
 <p class="mt-2 text-gray-300 max-w-lg">
 Tech entrepreneur, productivity expert, and lifelong learner. Alex has been in the tech industry for over 10 years, working with startups and Fortune 500 companies. Through TechWave, Alex shares insights from industry leaders and practical advice for anyone looking to grow in tech.
 </p>
+
+<!-- Social icons restored -->
+<div class="flex items-center gap-5 mt-5">
+<a href="#"><img src="assets/images/linkedin.png" class="w-7"></a>
+<a href="#"><img src="assets/images/instagram.png" class="w-7"></a>
+<a href="#"><img src="assets/images/x.png" class="w-7"></a>
+<a href="#"><img src="assets/images/youtube.png" class="w-7"></a>
+</div>
 </div>
 </div>
 </section>
